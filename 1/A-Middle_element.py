@@ -9,3 +9,21 @@
 Формат вывода
 Выведите число, которое будет стоять между двумя другими после упорядочивания.
 '''
+
+
+def middle_element(a, b, c):
+    if a <= b <= c or c <= b <= a:
+        return b
+    elif b <= a <= c or c <= a <= b:
+        return a
+    else:
+        return c
+
+
+def main():
+    a, b, c = map(int, input().split())
+    print(middle_element(a, b, c))
+
+
+if __name__ == '__main__':
+    main()
